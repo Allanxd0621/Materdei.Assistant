@@ -13,6 +13,12 @@ body {
       padding: 1rem;
       text-align: center;
     }
+      .header-logo{
+      border-radius:50% ;
+      width: 50px;
+      height: 50px;
+    }
+            
 
     #chat-box {
       flex: 1;
