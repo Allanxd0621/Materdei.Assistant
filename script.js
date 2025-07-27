@@ -1,4 +1,5 @@
-const chatBox = document.getElementById('chat-box');
+
+  const chatBox = document.getElementById('chat-box');
   const userInput = document.getElementById('user-input');
   const sendBtn = document.getElementById('send-btn');
 
@@ -14,14 +15,13 @@ const chatBox = document.getElementById('chat-box');
     "enrollment": "Enrollment usually begins in June. Check our Facebook page for announcements.",
     "tuition": "Tuition fees vary per course. You can ask the registrar for details.",
     "id": "Lost your ID? Visit the student affairs office for a replacement.",
-    "facebook": 'The Facebook account of our school is <a href="https://www.facebook.com/mdctubigon" target="_blank">Mater Dei College</a>.',
   };
 
   // Add message to chat box
   function addMessage(text, sender) {
     const message = document.createElement('div');
     message.className = `message ${sender}`;
-    message.innerHTML = text; // Use innerHTML to allow links
+    message.textContent = text;
     chatBox.appendChild(message);
     chatBox.scrollTop = chatBox.scrollHeight;
   }
