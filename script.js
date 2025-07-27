@@ -1,30 +1,33 @@
 const chatBox = document.getElementById('chat-box');
-  const userInput = document.getElementById('user-input');
-  const sendBtn = document.getElementById('send-btn');
+const userInput = document.getElementById('user-input');
+const sendBtn = document.getElementById('send-btn');
 
-  let userName = null;
-
-  const botResponses = {
-    "hello": "Hi there! How can I help you today?",
-    "hi": "Hello! Need help with anything?",
-    "schedule": "Our class schedule is posted on the bulletin board and website.",
-    "uniform": "Wear your school uniform Monday to Thursday. Friday is wash day!",
-    "library": "Library is open from 8 AM to 5 PM, Monday to Friday.",
-    "guidance": "You can find the guidance office on the second floor, Room 203.",
-    "enrollment": "Enrollment usually begins in June. Check our Facebook page for announcements.",
-    "tuition": "Tuition fees vary per course. You can ask the registrar for details.",
-    "id": "Lost your ID? Visit the student affairs office for a replacement.",
-    "facebook": 'The Facebook account of our school is <a href="https://www.facebook.com/mdctubigon" target="_blank">Mater Dei College</a>.',
-  };
-
-  // Add message to chat box
-  function addMessage(text, sender) {
-    const message = document.createElement('div');
-    message.className = `message ${sender}`;
-    message.innerHTML = text; // Use innerHTML to allow links
-    chatBox.appendChild(message);
-    chatBox.scrollTop = chatBox.scrollHeight;
+// List of keywords and their corresponding bot replies
+const botResponses = {
+  "hello": "Hi there! How can I help you today?",
+  "hi": "Hello! Need help with anything?",
+  "schedule": "You can view the school schedule on our website or ask your class adviser.",
+  "uniform": "Uniforms must be worn Monday to Friday.But there is a special wash day uniform for Wednesdays.",
+  "library": "The library is open from 8 AM to 5 PM on weekdays.",
+  "guidance": "The guidance office is located in Room 203, second floor.",
+  "enrollment": "Enrollment starts every June. Check our school FB page for updates.",
+  "tuition": "For tuition inquiries, please visit the registrar or accounting office.",
+  "id": "If you lost your ID, go to the student affairs office for assistance.",
+  "handsome": "The most handsome in Mater dei College is none other than Ceejhay himself.",
+  "nigga": "Ayaw pag sulti-sulti og inana kay pusilon ka sa mga guard",
+  "facebook": 'You can find us on Facebook at<a href="https://web.facebook.com/mdctubigon" target="_blank">Mater Dei College.</a>.',
+};
+function addMessage(text, sender) {
+  const message = document.createElement('div');
+  message.className = `message ${sender}`;
+  if (sender === "bot") {
+    message.innerHTML = text; // Allow HTML for bot messages
+  } else {
+    message.textContent = text; // Escape user messages
   }
+  chatBox.appendChild(message);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
 
   // Generate bot reply
   function getBotReply(input) {
@@ -88,4 +91,3 @@ const chatBox = document.getElementById('chat-box');
   window.addEventListener('DOMContentLoaded', () => {
     addMessage("Hey! I’m Ceejhay 🤖, how can I help you today?", "bot");
   });
-
