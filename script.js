@@ -30,7 +30,7 @@ function addMessage(text, sender) {
   chatBox.appendChild(message);
   chatBox.scrollTop = chatBox.scrollHeight;
 }
-
+u
 // Generate bot reply
 function getBotReply(input) {
   const lowerInput = input.toLowerCase();
