@@ -55,7 +55,7 @@
   function simulateTypingEffect(botReply) {
     const typingMessage = document.createElement('div');
     typingMessage.className = 'message bot';
-    typingMessage.textContent = "Ceejhay is typing...";
+    typingMessage.textContent = "Taysa typing...";
     chatBox.appendChild(typingMessage);
     chatBox.scrollTop = chatBox.scrollHeight;
 
