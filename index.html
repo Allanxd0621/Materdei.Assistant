@@ -4,26 +4,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>School Assistant Bot</title>
+
+  <!-- External CSS and JavaScript -->
   <link rel="stylesheet" href="stylesheet.css" />
   <script src="script.js" defer></script>
-  <favicon href="Mater_Dei_College_Logo_1.png" type="image/png"/>
+
+  <!-- Favicon (fixed tag) -->
+  <link rel="icon" href="Mater_Dei_College_Logo_1.png" type="image/png"/>
 </head>
 <body>
 
+  <!-- Header with logo and title -->
   <header>
-    <img src="Mater_Dei_College_Logo_1.png" class="header-logo" alt="logo">
+    <img src="Mater_Dei_College_Logo_1.png" class="header-logo" alt="MDC Logo">
     <h1>📘 MDC School Assistant Bot</h1>
     <p>Ask me anything about our school!</p>
   </header>
 
-  <div id="chat-box"></div>
+  <!-- Main chat container -->
+  <main>
 
-  <div id="input-area">
-    <input type="text" id="user-input" placeholder="Type your question here..." />
-    <button id="send-btn">Send</button>
-  </div>
+    <!-- Chat display box (this was missing in your original) -->
+    <div id="chat-box" class="chat-box">
+      <!-- Messages from bot and user will appear here -->
+    </div>
 
-  
+    <!-- First row: Suggested quick questions -->
+    <div id="question-buttons" style="display: flex; gap: 5px; margin-top: 10px;">
+      <button class="choice-btn" onclick="addMessage('schedule', 'user'); simulateTypingEffect(getBotReply('schedule'));">Schedule</button>
+      <button class="choice-btn" onclick="addMessage('tuition', 'user'); simulateTypingEffect(getBotReply('tuition'));">Tuition</button>
+      <button class="choice-btn" onclick="addMessage('id', 'user'); simulateTypingEffect(getBotReply('id'));">ID</button>
+    </div>
+
+    <!-- Second row: Course/Year buttons (hidden at first) -->
+    <div id="course-buttons" style="display: none; gap: 5px; margin-top: 10px;">
+      <!-- Buttons like BSIT 1st Year, BSHM 2nd Year, etc. will be created here by JS -->
+    </div>
+
+    <!-- Input box and send button -->
+    <div id="input-area" style="margin-top: 15px;">
+      <input type="text" id="user-input" placeholder="Type your question here..." />
+      <button id="send-btn">Send</button>
+    </div>
+
+  </main>
 
 </body>
 </html>
