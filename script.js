@@ -19,7 +19,10 @@ const botResponses = {
   "tuition": "For tuition inquiries, please visit the registrar or accounting office.",
   "id": "If you lost your ID, go to the student affairs office for assistance.",
   "handsome": "The most handsome in Mater Dei College is none other than Ceejhay himself.",
-  "facebook": 'You can find us on Facebook at <a href="https://web.facebook.com/mdctubigon" target="_blank">Mater Dei College</a>.'
+  "facebook": 'You can find us on Facebook at <a href="https://web.facebook.com/mdctubigon" target="_blank">Mater Dei College</a>.',
+  "wifi": "The wifi password for the Mentors is <strong> M$D$C$Teachers25 </strong>.",
+  "Wifi": "The wifi password for the Mentors is <strong> M$D$C$Teachers25 </strong>.",
+  "ceejhay" : "Ceejhay is the most annoying person in the whole mdc.",
 };
 
 // Add a new message to the chat
@@ -39,7 +42,7 @@ function getBotReply(input) {
   const nameMatch = lowerInput.match(/(?:i am|i'm|my name is)\s+([a-zA-Z]+)/);
   if (nameMatch) {
     userName = nameMatch[1].charAt(0).toUpperCase() + nameMatch[1].slice(1);
-    return `Nice to meet you, ${userName}! 😊`;
+    return `A Mater dei Greetings!, ${userName}! 😊`;
   }
 
   // Handle "schedule" separately
@@ -103,7 +106,7 @@ function handleSend() {
 function showCourseOptions() {
   courseButtons.innerHTML = ""; // Clear previous buttons
 
-  const courses = ["BSIT1S1", "BSIT1S2", "BSBA 1B"];
+  const courses = ["BSIT1-S1", "BSIT1-S2", ""];
   courses.forEach(course => {
     const btn = document.createElement("button");
     btn.textContent = course;
@@ -119,11 +122,11 @@ function showCourseOptions() {
 function showSchedule(course) {
   let schedule = "";
 
-  if (course === "BSIT1S1") {
-    schedule = "📅 BSIT 1 Schedule: Section 1 MWF  - Computing101(7am to 8am) - History101(9am to 10am) - INSTI101(10am to 11am) - Computing101(12pm to 1pm) - PE(2pm to 3pm no class every Wednesday) - Programming101(5pm to 7pm).";
-  } else if (course === "BSIT1S2") {
-    schedule = "📅 BSIT 2A Schedule: TTh - 8AM to 12NN, MWF - Lab @ 1PM to 4PM.";
-  } else if (course === "BSBA 1B") {
+  if (course === "BSIT1-S1") {
+    schedule = "📅 <Strong> BSIT 1 Schedule: </strong> Section 1 <br> MWF Schedule <br>  • Computing101(7am to 8am) <br>  • History101(9am to 10am) <br> • INSTI101(10am to 11am) <br> • Computing101(12pm to 1pm) <br> • PE(2pm to 3pm no class every Wednesday) <br> • Programming101(5pm to 7pm). <br> Tue/thu <br>  • Mathematics(7am to 8:30am)";
+  } else if (course ==="BSIT1-S2") {
+    schedule = "📅 BSIT 2A Schedule: TTh - 8AM to 12 <br> NN, MWF - Lab @ 1PM to 4PM.";
+  } else if (course === "BSIT") {
     schedule = "📅 BSBA 1B Schedule: MWF - 7AM to 11AM, TTh - PE & NSTP @ 1PM.";
   }
 
@@ -139,5 +142,5 @@ userInput.addEventListener('keydown', (e) => {
 
 // Show welcome message when the page loads
 window.addEventListener('DOMContentLoaded', () => {
-  addMessage("Hey! I’m Ceejhay 🤖, how can I help you today?", "bot");
+  addMessage("Hey! I'm Mater your personal Assistant, how may I help you today?", "bot");
 });
