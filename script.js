@@ -123,7 +123,7 @@ function showSchedule(course) {
   let schedule = "";
 
   if (course === "BSIT1-S1") {
-    schedule = "📅 <Strong> BSIT 1 Schedule: </strong> Section 1 <br> MWF Schedule <br>  • Computing101(7am to 8am) <br>  • History101(9am to 10am) <br> • INSTI101(10am to 11am) <br> • Computing101(12pm to 1pm) <br> • PE(2pm to 3pm no class every Wednesday) <br> • Programming101(5pm to 7pm). <br> Tue/thu <br>  • Mathematics(7am to 8:30am)";
+    schedule = "📅 <Strong> BSIT 1 Schedule: </strong> Section 1 <br><br> <strong>MWF Schedule </strong> <br>  • Computing101(7am to 8am) <br>  • History101(9am to 10am) <br> • INSTI101(10am to 11am) <br> • Computing101(12pm to 1pm) <br> • PE(2pm to 3pm no class every Wednesday) <br> • Programming101(5pm to 7pm). <br> <br> <strong> Tue/thu <br> </strong> • Mathematics(7am to 8:30am)<br> • Perdev(9am to 10:30am) " ;
   } else if (course ==="BSIT1-S2") {
     schedule = "📅 BSIT 2A Schedule: TTh - 8AM to 12 <br> NN, MWF - Lab @ 1PM to 4PM.";
   } else if (course === "BSIT") {
