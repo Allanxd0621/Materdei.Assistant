@@ -22,9 +22,12 @@ const botResponses = {
   "thanks": "You're welcome! If you have any more questions, feel free to ask.",
   "thank you": "You're welcome! If you have any more questions, feel free to ask.",
   "creator": "The creator of MDC chat assistant is Nino Allandino Manalo of Catigian Bohol (freshman).",
-  "vision": "  <strong> Vision:</strong> <br> <br> Mater Dei College is a community of dedicated educators and community-oriented students who believe in the search for truth that leads to WISDOM; unselfish living through <strong>SERVICE</strong> as an expression of <strong>charity</strong>; and the pursuit of <strong>PRAYER LIFE</strong> through living the gospel as taught by the Catholic Church and as exemplified by Mary, the mother of God in whose honor the college identifies herself."
-};
-
+  "vision": "  <strong> Vision:</strong> <br> <br> Mater Dei College is a community of dedicated educators and community-oriented students who believe in the search for truth that leads to  <strong> WISDOM;</strong> unselfish living through <strong>SERVICE</strong> as an expression of <strong>charity</strong>; and the pursuit of <strong>PRAYER LIFE</strong> through living the gospel as taught by the Catholic Church and as exemplified by Mary, the mother of God in whose honor the college identifies herself.",
+  "mission": "<strong> Mater Dei </strong> <br> <br> College commits herself to provide a holistic Catholic education to deserving youth with a preferential option for the economically-disadvantaged of northern Bohol to enable them to become responsible citizens and servant leaders in nation building.",
+  "goal statement": "<strong>Goal Statement:</strong> <br> <br> Mater Dei College strives to produce graduates who are God-loving,law-abiding, environment-friendly, and morally principled professionals who by their able response to the call of duty, actively participate in total human formation and in the positive transformation of the communities.",
+  "alma mater song": "<strong> MDC ALMA MATER SONG </strong> <br> <i> Dr. Benjamin Mejorada <br> <br> I beneath the wings <br> Of our great founderd's vision <br> That scared in time <br> to shape our life's ambition <br> With faith, abiding, hope <br> Assuring us along <br> Our minds you feed <br> And clear them of the wrong <br> <br> <strong> II <br> </strong> Hail,Mater Dei <br> with pride and joy we sing to you <br> And sound your trump <br> Of fame to any place we go <br> Enthrone your values right <br> in every work we do <br> Our hearts be one <br> And spirits whole for MDC <br> <br> <strong> Refrain:</strong> <br> The challenges we face <br> In life's full battle strand <br> The dreams we follow to <br> Achieve a mission grand <br> A burning trust we have <br> In your prime faculty <br> Will give you honor, <br> Love,respect and loyalty. <br> <br> <strong>III </strong> <br> O Mater Dei <br> We thank you for the learning years <br> The beacon light that guides <br> Us to the trinity <br> <br> Of humble Wisdom, prayer life, and charity <br> Thru service, go MDC go <br> Let's drum our cheers...",
+  "MDC hymn": "<strong> MDC HYMN </strong> <br> <br> Borne in the hearts of our forebears <br> Are wisdom, love, and prayer, <br> Values native to our own culture <br> Based on the gospel truths, thru Mater Dei. <br> <br> We're the youths of Mater Dei <br> Our dear Alma, Thee we pray; <br> Deep in wisdom, love, and prayer, <br> we pledge our love to thee, o Mater Dei. <br> <br> From North to south of lovely Bohol, <br> From Batasan,Clarin, to Talibon, <br> For Wisdom, love, and prayer for all <br> We come to MDC Tubigon. <br> <br>  From East to West of lovely Bohol, <br> From Anda,Jagna across Loon. <br> For Wisdom, Love, and Prayers for all <br> We come to MDC Tubigon. <br> <br> To Christ thru Mary, for God and country, <br> O mother Mary, we recourse to thee <br> Where we live and lead in our life and deed <br> we will always be for Mater Dei. <br> <br> We hoist your high above Cabulijan skies <br> we pledge our love to thee, O Mater Dei! "
+}
 function addMessage(text, sender) {
   const message = document.createElement('div');
   message.className = `message ${sender}`;
@@ -61,7 +64,7 @@ function getBotReply(input) {
     }
   }
 
-  return "I'm sorry, I don't have the answer to that right now. Please ask about another school topic!";
+  return "I'm sorry, Can you be more specific BOGO KAYKO!";
 }
 
 function simulateTypingEffect(text) {
